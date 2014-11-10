@@ -6,7 +6,8 @@ describe('POS-TDD', function(){
         var input = 'ITEM000001', expectedResult = {name: '雪碧', barcode: 'ITEM000001', unit: '瓶', price: 3}
         var allItemsInfo = loadAllItems();
 
-        var result = new ItemBasicInfo(input, allItemsInfo);
+       // var result = new ItemBasicInfo(input, allItemsInfo);
+        var reseult = ItemBasicInfo (input, allItemsInfo);
         expect(result).toEqual(expectedResult);
     });
 
