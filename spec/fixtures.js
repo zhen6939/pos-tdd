@@ -1,11 +1,11 @@
 function loadAllItems() {
     return [
-        new Item('ITEM000000', '可口可乐', '瓶', 3.00),
-        new Item('ITEM000001', '雪碧', '瓶', 3.00),
-        new Item('ITEM000002', '苹果', '斤', 5.50),
-        new Item('ITEM000003', '荔枝', '斤', 15.00),
-        new Item('ITEM000004', '电池', '个', 2.00),
-        new Item('ITEM000005', '方便面', '袋', 4.50)
+        new Item('可口可乐', 'ITEM000000', '瓶', 3.00),
+        new Item('雪碧', 'ITEM000001', '瓶', 3.00),
+        new Item('苹果', 'ITEM000002', '斤', 5.50),
+        new Item('荔枝', 'ITEM000003', '斤', 15.00),
+        new Item('电池', 'ITEM000004', '个', 2.00),
+        new Item('方便面', 'ITEM000005', '袋', 4.50)
     ];
 }
 

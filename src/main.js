@@ -13,6 +13,7 @@ function ItemBasicInfo(input, allItemInfo){
             this.name = allItemInfo[i].name;
             this.unit = allItemInfo[i].unit;
             this.price = allItemInfo[i].price;
+
         }
     }
 }
