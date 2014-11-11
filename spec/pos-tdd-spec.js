@@ -1,14 +1,27 @@
 /**
  * Created by liu on 11/8/14.
  */
-describe('POS-TDD', function(){
 
-    it('should return an item basic info class included name/barcode/unit/price when given a barcode', function(){
-        var input = 'ITEM000001',
-            expectedResult = {name: '雪碧', barcode: 'ITEM000001', unit: '瓶', price: 3};
+describe('pos', function () {
+    var allItems;
+    var inputs;
 
-        var allItemsInfo = loadAllItems();
-        var result = new ItemBasicInfo(input, allItemsInfo);
-        expect(result.toString()).toEqual(expectedResult.toString());
+    beforeEach(function () {
+        allItems = loadAllItems();
+
+    });
+
+    it('should print an single item basic info  name/barcode/unit/price when given a barcode array', function () {
+        inputs = [
+            'ITEM000001'
+        ];
+        spyOn(console, 'log');
+
+        printInventory(inputs);
+
+        var expectText =
+            '名称：雪碧，条形码：ITEM000001，单价：3.00（元），单位：瓶';
+
+        expect(console.log).toHaveBeenCalledWith(expectText);
     });
 });
