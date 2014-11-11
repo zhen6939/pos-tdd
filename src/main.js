@@ -4,8 +4,14 @@
 function ItemBasicInfo (input, allItemsInfo){
     for (var i = 0; i <= allItemsInfo.length; i++){
         if (allItemsInfo[i].barcode == input){
-            var shoppingItem = allItemsInfo[i];
-            return shoppingItem;
+            return  (
+              function ItemBasicInfo(name,barcode,unit,price){
+              this.name = allItemsInfo[i].name;
+              this.barcode = allItemsInfo[i].barcode;
+              this.unit = allItemsInfo[i].unit;
+              this.price = allItemsInfo[i].price;
+            }
+            )
         }
     }
 }

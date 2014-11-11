@@ -1,4 +1,4 @@
-function Item(barcode, name, unit, price) {
+function Item(name, barcode, unit, price) {
     this.name = name;
     this.barcode = barcode;
     this.unit = unit;
