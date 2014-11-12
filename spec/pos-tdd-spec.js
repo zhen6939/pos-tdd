@@ -12,7 +12,7 @@ describe('pos', function () {
 
     });
 
-    it('should print an single item basic info  name/barcode/price/amount/unit/cost' +
+    it('test2: should print an single item basic info  name/barcode/price/amount/unit/cost' +
         ' when given several  barcode inputs of the same', function () {
         inputs = [
             'ITEM000001',
@@ -30,7 +30,7 @@ describe('pos', function () {
 
     });
 
-    it('test2: should print a string included multi items info when given several barcode , ' +
+    it('test3: should print a string included multi items info when given several barcode , ' +
         'specially someone is with count', function(){
         inputs = [
             'ITEM000001',
