@@ -1,11 +1,14 @@
 /**
  * Created by liu on 11/11/14.
  */
+
 function ItemBasicInfo(inputs, allItemInfo){
     this.name = null;
     this.barcode = null;
     this.unit = null;
     this.price = null;
+    this.count = null;  //add two properties
+    this.totPrice = null;
 
     for (var i in allItemInfo){
         if (inputs.contains(allItemInfo[i].barcode)){
@@ -13,15 +16,16 @@ function ItemBasicInfo(inputs, allItemInfo){
             this.name = allItemInfo[i].name;
             this.unit = allItemInfo[i].unit;
             this.price = allItemInfo[i].price;
-
+            this.count = 1;
+            this.totPrice = allItemInfo[i].price;
         }
     }
 }
 
-ItemBasicInfo.prototype.print = function(){
-    var printResult = '名称：' + this.name + '，条形码：' + this.barcode + '，单价：' + this.price.toFixed(2) + '（元），单位：' + this.unit;
-    console.log(printResult);
 
+ItemBasicInfo.prototype.addCount = function(num){
+    this.count += num;
+    this.totPrice = this.count * this.price;
 }
 
 Array.prototype.contains = function (element) {

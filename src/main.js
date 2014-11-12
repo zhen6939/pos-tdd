@@ -5,7 +5,15 @@
 
 function printInventory(inputs){
     var allItems = loadAllItems();
-    var singleitem = new ItemBasicInfo(inputs, allItems);
-    singleitem.print();
+    var itemsList = new ItemsList();
 
+    for (var i=0; i<inputs.length; ++i){
+        var singleItem = new ItemBasicInfo(inputs, allItems);
+        itemsList.add(singleItem);
+    }
+
+//   extrat the part of printing as a class Output
+    var op = new Output();
+    op.setPayItems(itemsList);
+    op.print();
 }
