@@ -15,9 +15,9 @@ describe('pos', function () {
     it('should print an single item basic info  name/barcode/price/amount/unit/cost' +
         ' when given several  barcode inputs of the same', function () {
         inputs = [
+            'ITEM000001',
+            'ITEM000001',
             'ITEM000001'
-          //  'ITEM000001',
-            //'ITEM000001'
         ];
         spyOn(console, 'log');
 
