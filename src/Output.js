@@ -20,6 +20,7 @@ Output.prototype.setPayItems = function(itemList){
 }
 
 Output.prototype.print = function(){
-    console.log(this.payItemsStr);
+    return this.payItemsStr;
 }
+
 

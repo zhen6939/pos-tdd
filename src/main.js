@@ -15,5 +15,6 @@ function printInventory(inputs){
 //   extrat the part of printing as a class Output
     var op = new Output();
     op.setPayItems(itemsList);
-    op.print();
+
+    return op.print();
 }

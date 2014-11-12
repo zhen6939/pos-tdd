@@ -19,14 +19,13 @@ describe('pos', function () {
             'ITEM000001',
             'ITEM000001'
         ];
-        spyOn(console, 'log');
 
-        printInventory(inputs);
+        var result = printInventory(inputs);
 
         var expectText =
             '名称：雪碧，数量：3瓶，单价：3.00(元)，小计：9.00(元)\n';
 
-        expect(console.log).toHaveBeenCalledWith(expectText);
+        expect(result).toEqual(expectText);
 
     });
 
@@ -44,10 +43,7 @@ describe('pos', function () {
             'ITEM000005'
         ];
 
-        spyOn(console, 'log');
-
-
-        printInventory(inputs);
+        var result = printInventory(inputs);
 
 //        care about the output
 //        no need to fix expectText 100%, your thought and code are first.
@@ -56,7 +52,7 @@ describe('pos', function () {
             '名称：荔枝，数量：2斤，单价：15.00(元)，小计：30.00(元)\n' +
             '名称：方便面，数量：3袋，单价：4.50(元)，小计：13.50(元)\n';
 
-        expect(console.log).toHaveBeenCalledWith(expectText);
+        expect(result).toEqual(expectText);
 
     });
 });
