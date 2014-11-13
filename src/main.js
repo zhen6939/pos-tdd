@@ -7,8 +7,8 @@ function printInventory(inputs){
     var allItems = loadAllItems();
     var itemsList = new ItemsList();
 
-    for (var i=0; i<inputs.length; ++i){
-        var singleItem = new ItemBasicInfo(inputs, allItems);
+    for (var i=0; i<inputs.length; i++){
+        var singleItem = new ItemBasicInfo(inputs[i], allItems);
         itemsList.add(singleItem);
     }
 

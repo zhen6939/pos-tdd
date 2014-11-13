@@ -11,10 +11,13 @@ function loadAllItems() {
 
 function loadPromotions() {
     return [
-        new Promotion('BUY_TWO_GET_ONE_FREE', [
+        new Promotion1('BUY_TWO_GET_ONE_FREE', [
             'ITEM000000',
             'ITEM000001',
-            'ITEM000005'
+        ]),
+        // watch out! One more promotion ~ enjoy it
+        new Promotion2('BUY_ONE_GET_ONE_FREE',[
+           'ITEM000005'
         ])
-    ]
+    ];
 }
