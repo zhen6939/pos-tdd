@@ -54,13 +54,10 @@ Output.prototype.setContents = function(itemList){
 Output.prototype.print = function(){
     if (this.promotType == 'BUY_TWO_GET_ONE_FREE'){
         return this.payItemsStr + this.promotTitle + this.promotItemsStr;
-//        return '11111'
     }
     else if(this.promotType == null){
         return this.contensStr;
-//        return '22222'
     }
-
 }
 
 
