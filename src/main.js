@@ -3,18 +3,24 @@
  */
 
 
-function printInventory(inputs){
+function printInventory(inputs, promotionType){
     var allItems = loadAllItems();
     var itemsList = new ItemsList();
-
     for (var i=0; i<inputs.length; i++){
         var singleItem = new ItemBasicInfo(inputs[i], allItems);
         itemsList.add(singleItem);
     }
 
-//   extrat the part of printing as a class Output
     var op = new Output();
-    op.setPayItems(itemsList);
+    if (promotionType != undefined){
+        var promotionInfo = loadPromotions();
+        itemsList.parsePayItemsAndPromotionItems(promotionType, promotionInfo);
+        op.setPromotType(promotionType);
+        op.setPayItems(itemsList);
+        op.setPromotItems(itemsList);
+    }else{
+        op.setContents(itemsList);
+    }
 
     return op.print();
 }

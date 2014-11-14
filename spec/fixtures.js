@@ -11,12 +11,16 @@ function loadAllItems() {
 
 function loadPromotions() {
     return [
-        new Promotion1('BUY_TWO_GET_ONE_FREE', [
-            'ITEM000000',
+        new Promotion('BUY_TWO_GET_ONE_FREE', [
+            'ITEM000005',
             'ITEM000001',
         ]),
         // watch out! One more promotion ~ enjoy it
-        new Promotion2('BUY_ONE_GET_ONE_FREE',[
+
+//        loadPromotions() return a list included one or more than one Promotion class.
+//        you don't need to change Promotion() name to Promotion1() or Promotion2(),
+//        Promotion is fine!
+        new Promotion('BUY_ONE_GET_ONE_FREE_V2',[
            'ITEM000005'
         ])
     ];
