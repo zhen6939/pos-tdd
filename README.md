@@ -18,4 +18,13 @@ You've done nice work for your first test and the revised answer for test1.
 Now I've committed 'test2.several inputs of the same barcode' for you. Hope you'll enjoy finishing it.
 
 
+----------------Nov 14, 2014-----------------------
+Using Firebug for debugging, plz.
+It's easy to install and use, just google it.
+
+Tips:
+Try to set break points for debugging in Firebug.
+
+
+
 
