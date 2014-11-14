@@ -38,7 +38,8 @@ ItemsList.prototype.parsePayItemsAndPromotionItems = function(promotType, promot
                 this.promotItems.push({
                     name: this.contents[j].name,
                     unit: this.contents[j].unit,
-                    count: promotNum
+                    count: promotNum,
+                    saving:promotTotPrice
                 });
                 this.payItems.push({
                     name: this.contents[j].name,

@@ -12,13 +12,15 @@ function printInventory(inputs, promotionType){
     }
 
     var op = new Output();
-    if (promotionType != undefined){  //check if promotion is available
+    if (promotionType !== undefined){  //check if promotion is available
         var promotionInfo = loadPromotions();
         itemsList.parsePayItemsAndPromotionItems(promotionType, promotionInfo);
 
         op.setPromotType(promotionType);
         op.setPayItems(itemsList);
         op.setPromotItems(itemsList);
+        op.setAllCost(itemsList);
+        op.setAllSaved(itemsList);
     }else{
         op.setContents(itemsList);
     }
